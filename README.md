@@ -14,7 +14,7 @@ packages:
 #### 命令行
 
 ```js
-pnpm add moment -w // 全局暗转
+pnpm add moment -w // 全局安装
 pnpm add @mono/component --filter @mono/app // 局部安装
 ```
 
