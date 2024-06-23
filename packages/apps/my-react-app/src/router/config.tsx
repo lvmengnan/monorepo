@@ -1,24 +1,24 @@
-import React, { lazy, Suspense } from "react";
-import { RouteObject, redirect } from "react-router-dom";
-import Home from "@/pages/Home";
+import React, { lazy, Suspense } from 'react';
+import { RouteObject, redirect } from 'react-router-dom';
+import Home from '@/pages/Home';
 // import About from "@/pages/About";
 
-const About = lazy(() => import("@/pages/About"));
+const About = lazy(() => import('@/pages/About'));
 
 const routes: RouteObject[] = [
   {
-    path: "/",
+    path: '/',
     loader: () => {
-      return redirect("/home");
+      return redirect('/home');
     },
   },
   {
-    path: "/home",
+    path: '/home',
     index: true,
     element: <Home></Home>,
   },
   {
-    path: "/about",
+    path: '/about',
     element: (
       <Suspense fallback={<div>Loading...</div>}>
         <About></About>
